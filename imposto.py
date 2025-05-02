@@ -1,5 +1,6 @@
 import os
-os.system
+os.system ("cls || clear")
+
 import time
 
 def calcular_inss(salario_bruto):
@@ -17,7 +18,29 @@ def calcular_inss(salario_bruto):
 
     return desconto_inss
 
+
+
+
+
+
+def calcular_irrf(salario_bruto):
+
+    if 2259.21 <= salario_bruto <= 2826.65:
+        aliquota = 0.075
+    elif  2826.65 <= salario_bruto <= 3751.05:
+        aliquota = 0.15
+    elif 3751.05 <= salario_bruto <= 4664.68:
+        aliquota = 0.225
+    else:
+        aliquota = 0.275
+
+    desconto_irrf = salario_bruto * aliquota
+
+    return desconto_irrf
+
 salario_bruto = float(input("Informe o salário bruto: "))
 valor_inss = calcular_inss(salario_bruto)
-
+valor_irrf = calcular_irrf(salario_bruto)
 print(f"O valor do desconto do INSS é: R${valor_inss:.2f}")
+
+print(f"O valor do desconto do Irrf é: R${valor_irrf:.2f}")
