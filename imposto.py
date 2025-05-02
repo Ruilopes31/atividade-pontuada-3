@@ -4,11 +4,11 @@ import time
 
 def calcular_inss(salario_bruto):
 
-    if salario_bruto <= 1412.00:
+    if salario_bruto <= 1518.00:
         aliquota = 0.075
-    elif 1412.01 <= salario_bruto <= 2826.65:
+    elif 1518.01 <= salario_bruto <= 2793.88:
         aliquota = 0.09
-    elif 2826.66 <= salario_bruto <= 4240.00:
+    elif 2793.89 <= salario_bruto <= 4190.83:
         aliquota = 0.12
     else:
         aliquota = 0.14
