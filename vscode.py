@@ -27,19 +27,15 @@ def cadastrar_fun(lista_funcionario):
 
 
 
-def atualizar(lista):
+def excluir(lista):
     if verificar_lista_vazia(lista):
         return
    
-    nome_atualizar = input("Digite o nome do funcionário que deseja atualizar: ")
-    encontrado = False
+    nome_excluir = input("Digite o nome do funcionário: ")
+    for funcionario in lista_funcionarios:
+        if funcionario.nome == nome_excluir:
+            lista_funcionarios.remove(nome_excluir)
+            print("Funcionário excluído com sucesso.")
+        else:
+            print("Funcionário não encontrado.")
    
-    for funcionario in lista:
-        if funcionario.nome == nome_atualizar:
-            print("= Digite os dados do funcionário = ")
-            funcionario.nome=input("Nome: "),
-            funcionario.cpf=input("CPF: "),
-            funcionario.cargo=input("Cargo: "),
-            funcionario.salario=input("Salario: ")
-            encontrado = True
-            break
